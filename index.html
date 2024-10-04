@@ -25,8 +25,34 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="manifest" href="images/favicons/manifest.json">
 	<link rel="icon" sizes="192x192" href="images/favicons/favicon-192.png">
-	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const menu = document.querySelector('.menu');
+		const hamburger = document.querySelector('.hamburger');
+	
+		function toggleMenu() {
+			menu.classList.toggle('active');
+		}
+	
+		function closeMenuOutside(event) {
+			if (menu.classList.contains('active') && 
+				!menu.contains(event.target) && 
+				!hamburger.contains(event.target)) {
+				menu.classList.remove('active');
+			}
+		}
+	
+		hamburger.addEventListener('click', function(event) {
+			event.stopPropagation();
+			toggleMenu();
+		});
+	
+		document.addEventListener('click', closeMenuOutside);
+	});
+	</script>
+	
 	</head>
 
 	<body>
@@ -75,13 +101,6 @@
 			</p>
 		</div>
 	
-		<script>
-			function toggleMenu() {
-				const menu = document.querySelector('.menu');
-				menu.classList.toggle('active');
-			}
-		</script>
-		
 	</body>
 
 </html>
