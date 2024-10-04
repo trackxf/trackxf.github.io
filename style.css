@@ -1,0 +1,108 @@
+
+body, html {
+	margin: 0;
+	padding: 0;
+	font: 16px/1.4 Helvetica, Arial, sans-serif;
+	color: #333;
+}
+a {
+	text-decoration: none;
+	color: #4183C4;
+	cursor: pointer;
+}
+.masthead {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 10px;
+	max-width: 900px;
+	margin: 0 auto;
+	border-bottom: 1px solid #eee;
+}
+.masthead-left-content {
+	display: flex;
+	align-items: flex-start;
+}
+.logo {
+	width: 50px;
+	height: 50px;
+	margin-right: 20px;
+	border: solid 8px black;
+	border-radius: 8px;
+}
+.title-container {
+	display: flex;
+	flex-direction: column;
+}
+.title {
+	font: 28px/1.4 Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #666;
+	margin: 0;
+}
+.subtitle {
+	font: 16px/1.4 Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #666;
+	margin: 5px 0 0 0;
+}
+.menu {
+	display: flex;
+	font: 16px/1.4 Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	margin: 5px 0 0 0;
+}
+.menu a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #666;
+}
+.menu :hover {
+	color: #4183C4;
+}
+.hamburger {
+	display: none;
+	font-size: 36px;
+	color: #666;
+	cursor: pointer;
+}
+.main-content {
+	margin-top: 40px;
+	padding: 10px 20px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+.tagline-container {
+	max-width: 800px;
+	margin: 10px auto;
+	padding: 0 10px;
+}
+.tagline {
+	position: relative;
+	font-size: 1.25rem;
+	font-weight: 300;
+	color: #333;
+	padding: 0.5rem 0 0.5rem 1.5rem;
+	border-left: 8px solid #DDD;
+}
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+	.menu {
+		display: none;
+		flex-direction: column;
+		align-items: flex-end;
+		margin-top: 20px;
+	}
+	.menu.active {
+		display: flex;
+	}
+	.menu a {
+		margin: 10px 0;
+	}
+	.hamburger {
+		display: block;
+		align-self: flex-end;
+	}
+}

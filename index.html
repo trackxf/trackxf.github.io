@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>trackxf - the behavioural tracking exchange format</title>
+	<meta charset="utf-8" />
+	<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+	<meta name="description" content="A standardised and shareable format for spatial tracking data">
+	<meta property="og:description" content="A standardised and shareable format for spatial tracking data" />
+	<meta property="og:title" content="trackxf - the behavioural tracking exchange format" />
+	<meta property="twitter:title" content="trackxf - the behavioural tracking exchange format" />
+
+	<!-- favicons -->
+	<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="images/favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152-precomposed.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicons/favicon-144-precomposed.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120-precomposed.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicons/favicon-114-precomposed.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/favicon-180-precomposed.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/favicon-72-precomposed.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/favicon-57.png">
+	<link rel="icon" sizes="32x32" href="images/favicons/favicon-32.png" >
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="favicon-144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="manifest" href="images/favicons/manifest.json">
+	<link rel="icon" sizes="192x192" href="images/favicons/favicon-192.png">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	</head>
+
+	<body>
+		<div class="masthead">
+			<div class="masthead-left-content">
+				<img src="images/trackxf-logo-bw.png" alt="trackxf logo" class="logo">
+				<div class="title-container">
+					<h1 class="title">trackxf</h1>
+					<p class="subtitle">The behavioural tracking exchange format</p>
+				</div>
+			</div>
+			<div class="masthead-right-content">
+				<div class="hamburger" onclick="toggleMenu()">☰</div>
+				<nav class="menu">
+					<a href="index.html">Home</a>
+					<a	target="_blank" href="https://github.com/trackxf/trackxf/blob/4982c89ef962acf41e408d4ba24e504588dffd40/trackxf_schema_v0.json">Schema</a>
+					<a	target="_blank" href="https://github.com/trackxf/trackxf/tree/main">Repository</a>
+				</nav>
+			</div>
+		</div>
+		
+		<div class="main-content">
+			<h2 id="about">The trackxf format</h1>
+			<p>
+				In order to archive raw tracking data in a way that it can be shared with other researchers and with other software, it is necessary to establish a standardised data format. 
+				The trackxf project is designing a new format to fit this task.
+			</p>
+			
+			<div class="tagline-container">
+				<blockquote class="tagline">
+					A standardised and shareable format for spatial tracking data
+				</blockquote>
+        	</div>
+        	
+			<p>
+				The format is based around JSON&mdash;a simple and widely-used format suited to the storage of list-type data. Because the JSON standard is not bound to a particular software or programming language, it can easily be read by other software on any platform. In addition, because JSON is plain text, it is fully compatible with version control platforms and can be searched for metadata keywords if necessary.
+			</p>
+	
+			<p>
+			The trackxf format additionally compresses the JSON document to make the files a lot smaller. This is much better for storage and for transfer over the network.
+			</p>
+	
+			<h2 id="schema">The formal schema</h1>
+			<p>
+				The formal trackxf schema can be found here: <a target="_blank" href="https://github.com/trackxf/trackxf/blob/4982c89ef962acf41e408d4ba24e504588dffd40/trackxf_schema_v0.json">trackxf_schema_v0.json</a>.
+			</p>
+		</div>
+	
+		<script>
+			function toggleMenu() {
+				const menu = document.querySelector('.menu');
+				menu.classList.toggle('active');
+			}
+		</script>
+		
+	</body>
+
+</html>
